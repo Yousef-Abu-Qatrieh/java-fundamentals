@@ -16,8 +16,8 @@ public class Library {
 
         roll(5);
         System.out.println("");
-        int[] rr = {5, 4, 3, 5, 1, 6};
 
+        int[] rr = {5, 4, 3, 5, 1, 6};
         System.out.println(containsDuplicates(rr));
         int[] gg = {1, 2, 3, 4, 5, 6};
         System.out.println(containsDuplicates(gg));
@@ -79,17 +79,43 @@ public class Library {
     }
 
     public static double arrayArrays(int[][] arr) {
-//        ArrayList <Integer> value=new ArrayList<>();
-//        for (int i=0;i<arr.length;i++){
-//
-//
-//       }
-        double u = 0;
-        for (int[] arrs : arr) {
-            u = Arrays.stream(arrs).average().orElse(Double.NaN);
 
+        int firstAvg=0;
+        int secondAvg=0;
+        int thirdAvg=0;
+        int fourthAvg=0;
+        int smallAvg=0;
+        for(int index=0 ;index<arr.length;index++){
+            for(int secondIndex=index+1;index<arr.length;index++){
+                firstAvg+=arr[index][secondIndex];
+
+                secondAvg+=arr[1][secondIndex];
+
+                thirdAvg+=arr[2][secondIndex];
+                fourthAvg+=arr[3][secondIndex];
+
+            }
+            firstAvg/=arr.length;
+//            System.out.println(firstAvg);
+            secondAvg/=arr.length;
+//            System.out.println(secondAvg);
+            thirdAvg/=arr.length;
+//            System.out.println(thirdAvg);
+            fourthAvg/=arr.length;
+//            System.out.println(fourthAvg);
+            if(firstAvg<secondAvg&&firstAvg<thirdAvg&&firstAvg<fourthAvg){
+
+                smallAvg=firstAvg;
+
+            }else if(secondAvg<firstAvg&&secondAvg<thirdAvg&&secondAvg<fourthAvg){
+                smallAvg=secondAvg;
+            }else if(thirdAvg<firstAvg&&thirdAvg<secondAvg&&thirdAvg<fourthAvg){
+                smallAvg=thirdAvg;
+            }else {
+                smallAvg=firstAvg;
+            }
         }
-        return u;
+        return smallAvg;
 
     }
 }
