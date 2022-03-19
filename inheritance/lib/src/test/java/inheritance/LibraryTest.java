@@ -6,9 +6,35 @@ package inheritance;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+
 class LibraryTest {
+    Restaurant restaurant;
+    Shop shop;
+
     @Test void someLibraryMethodReturnsTrue() {
         Library classUnderTest = new Library();
 //        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
     }
+    @Test void addRestaurantReview(){
+        Restaurant restaurant=new Restaurant("test Restaurant",5,"$$$");
+        Review review=new Review("test","islam",4);
+        restaurant.addReview(review);
+       assertEquals("$$$",restaurant.getPriceCategory());
+
+    }
+    @Test void addShopReview(){
+        Shop shop=new Shop("B&Z",5,"Have a good items","$$");
+        Review review=new Review("wonderfulPlace","Ahmad",3);
+        shop.addReview(review);
+        assertEquals(4,shop.getNumberOfStars());
+
+    }
+    @Test void addTheaterReview(){
+      Theater theater=new Theater("Prime Cinema",4);
+        Review review=new Review("wonderfulPlace","Ahmad",3);
+        theater.addReview(review);
+        assertEquals(3,theater.getNumberOfStars());
+
+    }
+
 }
