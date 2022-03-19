@@ -6,15 +6,35 @@ package inheritance;
 public class Library {
     public static void main(String[] args) {
         // restaurant class instance
-        Restaurant restaurant=new Restaurant("ward",5,"$$$$");
+        Restaurant restaurant = new Restaurant("ward", 5, "$$$$");
         System.out.println(restaurant);
         //review instance test
-        Review review=new Review("this is text review","yousef",4);
+        Review review = new Review("this is text review", "yousef", 4);
         System.out.println(review);
         System.out.println("\n");
-Review restaurantReview=new Review("wonderful place","Jamal",4);
+        Review restaurantReview = new Review("wonderful place", "Jamal", 4);
         restaurant.addReview(restaurantReview);
         System.out.println(restaurantReview);
+        // shop class instance
+        Shop shop =new Shop("H&M",4,"cloth shop","$$$");
+        // add review for shop'
+        Review shopReview=new Review("have a nice goods","Ali",5);
+        shop.addReview(shopReview);
+        System.out.println(shopReview);
+        //Theater class instance
+        Theater theater=new Theater("Taj Cinema",5);
+        theater.addMovie("Eternals");
+        theater.addMovie("Avengers");
+        theater.addMovie("Kings Man");
+        System.out.println(theater);
+        theater.removeMovie("Kings Man");
+        System.out.println(theater);
+        //add review for Theater
+
+        Review theaterReview=new Review("Amazing place","Omar",5);
+        theater.addReview(theaterReview);
+        System.out.println(theater);
+
 
     }
 }
