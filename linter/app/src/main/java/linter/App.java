@@ -3,8 +3,7 @@
  */
 package linter;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.Scanner;
 
 public class App {
@@ -13,36 +12,67 @@ public class App {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         System.out.println(new App().getGreeting());
         gatesReader();
+
     }
 
-public static void gatesReader(){
-        File file=new File("src/main/resources/gates.js");
 
-        try(Scanner scanner=new Scanner(file)) {
-            while (scanner.hasNextLine()){
-                if (scanner.nextLine().isEmpty()){
-                    continue;
-                }
-                if (scanner.nextLine().endsWith("{")){
-                    continue;
-                }
-            if (scanner.nextLine().endsWith("}")){
-                continue;
-            }
-            if (scanner.nextLine().contains("if")||scanner.nextLine().contains("else")){
-                continue;
-            }
-            else if(! scanner.nextLine().endsWith(";")) {
-              System.err.println("Line : Missing semicolon.");
-            }
-            }
+    public static void gatesReader() throws IOException {
+        FileReader file = new FileReader("app/src/main/resources/gates.js");
+        System.out.println(file);
+        BufferedReader bufferedReader = new BufferedReader(file);
 
-        } catch (FileNotFoundException fileNotFoundException) {
-            System.err.println(fileNotFoundException.getMessage());
+        int counter = 0;
+        String line;
+        while ((line = bufferedReader.readLine()) != null) {
+            System.out.println(line);
+
+
+            if (bufferedReader.readLine().isEmpty()) {
+                counter++;
+                continue;
+
+
+            }
+            if (bufferedReader.readLine().endsWith("{")) {
+                counter++;
+                continue;
+
+            }
+            if (bufferedReader.readLine().endsWith("}")) {
+                counter++;
+                continue;
+
+            }
+            if (bufferedReader.readLine().contains("if") || bufferedReader.readLine().contains("else")) {
+                counter++;
+                continue;
+
+            }
+            if (bufferedReader.readLine().contains("return") && !bufferedReader.readLine().endsWith(";")) {
+
+                System.err.println("Line" + counter + ": Missing semicolon.");
+
+
+            }
+            bufferedReader.readLine();
+
+
+            counter++;
+
+
         }
+    }
 }
 
-}
+
+
+
+
+
+
+
+
+
