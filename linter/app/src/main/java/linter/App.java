@@ -14,55 +14,17 @@ public class App {
 
     public static void main(String[] args) throws IOException {
         System.out.println(new App().getGreeting());
-//        gatesReader();
-        gatesReader2();
+        gatesReader();
+
     }
 
-    public static void gatesReader() {
 
-        File file = new File("app/src/main/resources/gates.js");
-        System.out.println(file);
-
-        try (Scanner scanner = new Scanner(file)) {
-            while (scanner.hasNextLine()) {
-
-                if (scanner.nextLine().isEmpty()) {
-                    continue;
-
-                }
-                if (scanner.nextLine().endsWith("{")) {
-                    continue;
-
-                }
-                if (scanner.nextLine().endsWith("}")) {
-                    continue;
-
-                }
-                if (scanner.nextLine().contains("if") || scanner.nextLine().contains("else")) {
-                    continue;
-
-                }
-                if (!scanner.nextLine().endsWith(";")) {
-
-                    System.err.println("Line: Missing semicolon.");
-
-                }
-
-                scanner.nextLine();
-
-            }
-
-        } catch (FileNotFoundException fileNotFoundException) {
-            System.err.println(fileNotFoundException.getMessage());
-        }
-    }
-
-    public static void gatesReader2() throws IOException {
+    public static void gatesReader() throws IOException {
         FileReader file = new FileReader("app/src/main/resources/gates.js");
         System.out.println(file);
         BufferedReader bufferedReader = new BufferedReader(file);
 
-int counter=0;
+        int counter = 0;
         String line;
         while ((line = bufferedReader.readLine()) != null) {
             System.out.println(line);
@@ -80,18 +42,18 @@ int counter=0;
 
             }
             if (bufferedReader.readLine().endsWith("}")) {
-              counter++;
+                counter++;
                 continue;
 
             }
             if (bufferedReader.readLine().contains("if") || bufferedReader.readLine().contains("else")) {
-              counter++;
+                counter++;
                 continue;
 
             }
-            if (bufferedReader.readLine().contains("return")&&!bufferedReader.readLine().endsWith(";")) {
+            if (bufferedReader.readLine().contains("return") && !bufferedReader.readLine().endsWith(";")) {
 
-                System.err.println("Line"+counter+": Missing semicolon.");
+                System.err.println("Line" + counter + ": Missing semicolon.");
 
 
             }
