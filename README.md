@@ -18,3 +18,5 @@ a method that Iterate through all of the data to find the min and max values. Us
 
 # Tallying Election  
 a function called tally that accepts a List of Strings representing votes and returns one string to show what got the most votes.   
+# JavaScript Linter
+a method that reads a JavaScript file with a given Path, and generates an error message whenever it finds a line that doesn’t end in a semi-colon.   
