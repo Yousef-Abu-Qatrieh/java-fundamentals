@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="0baa9bcf-486a-4c8e-be1e-009779d008e9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../Main2/Main2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/com/example/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/com/example/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/test/java/com/example/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/com/example/LibraryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../linter/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../linter/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../linter/app/src/main/java/linter/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../linter/app/src/main/java/linter/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../linter/app/src/main/resources/gates.js" beforeDir="false" afterPath="$PROJECT_DIR$/../linter/app/src/main/resources/gates.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Library">
+  <component name="RunManager" selected="Gradle.LibraryTest.testArrayOfArray">
     <configuration name="Library" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -57,7 +60,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryTest.rollTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LibraryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -70,7 +73,7 @@
           <list>
             <option value=":lib:test" />
             <option value="--tests" />
-            <option value="&quot;com.example.LibraryTest.rollTest&quot;" />
+            <option value="&quot;com.example.LibraryTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -80,7 +83,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LibraryTest.someLibraryMethodReturnsTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LibraryTest.testArrayOfArray" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -93,7 +96,76 @@
           <list>
             <option value=":lib:test" />
             <option value="--tests" />
-            <option value="&quot;com.example.LibraryTest.someLibraryMethodReturnsTrue&quot;" />
+            <option value="&quot;com.example.LibraryTest.testArrayOfArray&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="LibraryTest.testCalculateAvg" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lib:test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.LibraryTest.testCalculateAvg&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="LibraryTest.testContainsDuplicates" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lib:test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.LibraryTest.testContainsDuplicates&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="LibraryTest.testRoll" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lib:test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.LibraryTest.testRoll&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -105,13 +177,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Library" />
-      <item itemvalue="Gradle.LibraryTest.rollTest (1)" />
-      <item itemvalue="Gradle.LibraryTest.someLibraryMethodReturnsTrue" />
+      <item itemvalue="Gradle.LibraryTest.testRoll" />
+      <item itemvalue="Gradle.LibraryTest.testContainsDuplicates" />
+      <item itemvalue="Gradle.LibraryTest.testCalculateAvg" />
+      <item itemvalue="Gradle.LibraryTest" />
+      <item itemvalue="Gradle.LibraryTest.testArrayOfArray" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LibraryTest.someLibraryMethodReturnsTrue" />
-        <item itemvalue="Gradle.LibraryTest.rollTest (1)" />
+        <item itemvalue="Gradle.LibraryTest.testArrayOfArray" />
+        <item itemvalue="Gradle.LibraryTest" />
+        <item itemvalue="Gradle.LibraryTest.testCalculateAvg" />
+        <item itemvalue="Gradle.LibraryTest.testContainsDuplicates" />
+        <item itemvalue="Gradle.LibraryTest.testRoll" />
       </list>
     </recent_temporary>
   </component>
@@ -126,7 +204,9 @@
       <workItem from="1645896645385" duration="14522000" />
       <workItem from="1646125047678" duration="92000" />
       <workItem from="1646145160448" duration="2443000" />
-      <workItem from="1646319411766" duration="645000" />
+      <workItem from="1646319411766" duration="1243000" />
+      <workItem from="1646408873115" duration="7728000" />
+      <workItem from="1647739420126" duration="4839000" />
     </task>
     <servers />
   </component>
