@@ -3,9 +3,7 @@
  */
 package com.example;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random;
+import java.util.*;
 
 public class Library {
     public boolean someLibraryMethod() {
@@ -34,13 +32,28 @@ public class Library {
                 {55, 54, 60, 53, 59, 57, 61},
                 {65, 56, 55, 52, 55, 62, 57}
         };
-        System.out.println(arrayArrays(weeklyMonthTemperatures));
+        System.out.println(Arrays.toString(new String[]{arrayArrays((weeklyMonthTemperatures)) + " smallest average array"}));
+
+        analyzingWeatherData(weeklyMonthTemperatures);
+        ArrayList<String> votes = new ArrayList<>();
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Bush");
+        votes.add("Shrub");
+        votes.add("Hedge");
+        votes.add("Shrub");
+        votes.add("Bush");
+        votes.add("Hedge");
+        votes.add("Bush");
+        String winner = tally(votes);
+        System.out.println(winner + " received the most votes!");
+
 
     }
 
     public static int[] roll(int roll) {
         int[] values = new int[roll];
-        Random random = new Random();
+
 
         for (int index = 0; index < values.length; index++) {
             int flip = (int) (Math.random() * 6 + 1);
@@ -79,43 +92,88 @@ public class Library {
     }
 
     public static double arrayArrays(int[][] arr) {
+double min=Double.MAX_VALUE,max=Double.MIN_VALUE;
+        double[] newArr = new double[arr.length];
+        for (int index = 0 ; index < arr.length ; index++) {
+            newArr[index] =  calculateAvg(arr[index]);
 
-        int firstAvg=0;
-        int secondAvg=0;
-        int thirdAvg=0;
-        int fourthAvg=0;
-        int smallAvg=0;
-        for(int index=0 ;index<arr.length;index++){
-            for(int secondIndex=index+1;index<arr.length;index++){
-                firstAvg+=arr[index][secondIndex];
 
-                secondAvg+=arr[1][secondIndex];
-
-                thirdAvg+=arr[2][secondIndex];
-                fourthAvg+=arr[3][secondIndex];
-
+        }
+        for (int index=0;index<newArr.length;index++){
+            if (min > newArr[index]) {
+                min = newArr[index];
             }
-            firstAvg/=arr.length;
-//            System.out.println(firstAvg);
-            secondAvg/=arr.length;
-//            System.out.println(secondAvg);
-            thirdAvg/=arr.length;
-//            System.out.println(thirdAvg);
-            fourthAvg/=arr.length;
-//            System.out.println(fourthAvg);
-            if(firstAvg<secondAvg&&firstAvg<thirdAvg&&firstAvg<fourthAvg){
-
-                smallAvg=firstAvg;
-
-            }else if(secondAvg<firstAvg&&secondAvg<thirdAvg&&secondAvg<fourthAvg){
-                smallAvg=secondAvg;
-            }else if(thirdAvg<firstAvg&&thirdAvg<secondAvg&&thirdAvg<fourthAvg){
-                smallAvg=thirdAvg;
-            }else {
-                smallAvg=firstAvg;
+            if (max < newArr[index]) {
+                max = newArr[index];
             }
         }
-        return smallAvg;
 
+        return min;
+    }
+
+    public static void analyzingWeatherData(int[][] arr) {
+        Set<Integer> setValues = new HashSet<>();
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        for (int index = 0; index < arr.length; index++) {
+            for (int secondIndex = 0; secondIndex < arr[index].length; secondIndex++) {
+
+                setValues.add(arr[index][secondIndex]);
+
+
+            }
+
+        }
+//        System.out.println(setValues);
+
+        for (int value :
+                setValues) {
+            if (min > value) {
+                min = value;
+            }
+            if (max < value) {
+                max = value;
+            }
+
+        }
+        System.out.println("High: " + max);
+        System.out.println("Low: " + min);
+
+        for (int index = min; index < max; index++) {
+            if (setValues.contains(index)) {
+                continue;
+            } else {
+
+                System.out.println("Never saw temperature: " + index);
+            }
+
+        }
+
+
+    }
+
+    public static String tally(ArrayList<String> votes) {
+        int countBush = 0;
+        int countShrub = 0;
+        int countHedge = 0;
+        String winner;
+        for (String vote :
+                votes) {
+            if (vote.equals("Bush")) {
+                countBush++;
+            }else if(vote.equals("Shrub")){
+                countShrub++;
+            }else if(vote.equals("Hedge")){
+                countHedge++;
+            }
+        }
+        if(countBush>countShrub&&countBush>countHedge){
+           return winner="Bush";
+        }else if(countHedge>countBush&&countHedge>countShrub){
+           return winner="Hedge";
+        }else if(countShrub>countBush&&countShrub>countHedge){
+           return winner="Shurb";
+        }else {
+        return "Unknown";}
     }
 }

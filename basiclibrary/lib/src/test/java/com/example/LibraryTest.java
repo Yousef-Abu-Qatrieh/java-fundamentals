@@ -11,5 +11,43 @@ class LibraryTest {
         Library classUnderTest = new Library();
         assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
     }
+    @Test void testRoll(){
+        boolean test = true;
+        int numberOfroll = 3;
+        int[] value = Library.roll(numberOfroll);
+        for (int elemnt :
+                value) {
+            if (elemnt < 0 || elemnt > 6) {
+                test = false;
+            }
+        }
+        if (value.length != numberOfroll) {
+            test = false;
+        }
 
+        assertTrue(test);
+    }
+    @Test void testContainsDuplicates(){
+        int[] rr = {5, 4, 3, 5, 1, 6};
+        boolean actual=Library.containsDuplicates(rr);
+        boolean expected=true;
+        assertTrue(expected, String.valueOf(actual));
+    }
+    @Test void testCalculateAvg(){
+        int[] ss = {1, 5, 7, 8, 9, 6, 10};
+        double actual=Library.calculateAvg(ss);
+        double expected=6.571428571428571;
+        assertEquals(expected,actual);
+    }
+@Test void testArrayOfArray(){
+    int[][] weeklyMonthTemperatures = {
+            {66, 64, 58, 65, 71, 57, 60},
+            {57, 65, 65, 70, 72, 65, 51},
+            {55, 54, 60, 53, 59, 57, 61},
+            {65, 56, 55, 52, 55, 62, 57}
+    };
+    double actual=Library.arrayArrays(weeklyMonthTemperatures);
+    double expected=57.0;
+    assertEquals(expected,actual);
+}
 }
