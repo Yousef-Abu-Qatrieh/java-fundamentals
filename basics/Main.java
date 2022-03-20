@@ -39,26 +39,33 @@ public class Main {
 
     }
 
+
+
     public  static void flipNHeads(int flip){
         Random random= new Random();
         int headCounter=0;
         String [] headTail = new String[flip];
 
-        for(int i=0;i<headTail.length;i++){
+        for (int index = 0; index < headTail.length; index++) {
 
-            double doubleRandom=random.nextDouble();
-            if(doubleRandom<0.5){
-                System.out.println("tail");
-                headTail[i]="tail";
-            }else if(doubleRandom>0.5){
-                System.out.println("head");
+            for (int secondIndex = index + 1; secondIndex < headTail.length; secondIndex++) {
 
-                headTail[i]="head";
-                if(headTail[i].equals(headTail[i])){
+                double doubleRandom=random.nextDouble();
+                if(doubleRandom<0.5){
+                    System.out.println("tail");
+                    headTail[index]="tail";
+                }else if(doubleRandom>0.5){
+                    System.out.println("head");
 
+            }
+
+                if (headTail[index] == headTail[secondIndex]) {
                     headCounter++;
 
+                    break;
+
                 }
+
             }
 
 
