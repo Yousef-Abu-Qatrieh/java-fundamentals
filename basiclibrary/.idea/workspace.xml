@@ -50,7 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Gradle.LibraryTest.testArrayOfArray">
+  <component name="RunManager" selected="Gradle.LibraryTest">
     <configuration name="Library" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -74,6 +74,29 @@
             <option value=":lib:test" />
             <option value="--tests" />
             <option value="&quot;com.example.LibraryTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="LibraryTest.analyzingWeatherData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lib:test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.LibraryTest.analyzingWeatherData&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -129,7 +152,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LibraryTest.testContainsDuplicates" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LibraryTest.testTallyingElection" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -142,30 +165,7 @@
           <list>
             <option value=":lib:test" />
             <option value="--tests" />
-            <option value="&quot;com.example.LibraryTest.testContainsDuplicates&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="LibraryTest.testRoll" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":lib:test" />
-            <option value="--tests" />
-            <option value="&quot;com.example.LibraryTest.testRoll&quot;" />
+            <option value="&quot;com.example.LibraryTest.testTallyingElection&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -177,19 +177,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Library" />
-      <item itemvalue="Gradle.LibraryTest.testRoll" />
-      <item itemvalue="Gradle.LibraryTest.testContainsDuplicates" />
       <item itemvalue="Gradle.LibraryTest.testCalculateAvg" />
       <item itemvalue="Gradle.LibraryTest" />
       <item itemvalue="Gradle.LibraryTest.testArrayOfArray" />
+      <item itemvalue="Gradle.LibraryTest.analyzingWeatherData" />
+      <item itemvalue="Gradle.LibraryTest.testTallyingElection" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.LibraryTest.testArrayOfArray" />
         <item itemvalue="Gradle.LibraryTest" />
+        <item itemvalue="Gradle.LibraryTest.testTallyingElection" />
+        <item itemvalue="Gradle.LibraryTest.analyzingWeatherData" />
+        <item itemvalue="Gradle.LibraryTest.testArrayOfArray" />
         <item itemvalue="Gradle.LibraryTest.testCalculateAvg" />
-        <item itemvalue="Gradle.LibraryTest.testContainsDuplicates" />
-        <item itemvalue="Gradle.LibraryTest.testRoll" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +206,8 @@
       <workItem from="1646145160448" duration="2443000" />
       <workItem from="1646319411766" duration="1243000" />
       <workItem from="1646408873115" duration="7728000" />
-      <workItem from="1647739420126" duration="4839000" />
+      <workItem from="1647739420126" duration="7477000" />
+      <workItem from="1647793964532" duration="2284000" />
     </task>
     <servers />
   </component>

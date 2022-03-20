@@ -26,15 +26,11 @@ public class Library {
         int aa[] = {44, 50, 30, 20, 80, 99, 78};
         calculateAvg(aa);
 
-        int[][] weeklyMonthTemperatures = {
-                {66, 64, 58, 65, 71, 57, 60},
-                {57, 65, 65, 70, 72, 65, 51},
-                {55, 54, 60, 53, 59, 57, 61},
-                {65, 56, 55, 52, 55, 62, 57}
-        };
+        int[][] weeklyMonthTemperatures = {{66, 64, 58, 65, 71, 57, 60}, {57, 65, 65, 70, 72, 65, 51}, {55, 54, 60, 53, 59, 57, 61}, {65, 56, 55, 52, 55, 62, 57}};
         System.out.println(Arrays.toString(new String[]{arrayArrays((weeklyMonthTemperatures)) + " smallest average array"}));
-
+        System.out.println("****************************      analyzingWeatherData     *******************************");
         analyzingWeatherData(weeklyMonthTemperatures);
+
         ArrayList<String> votes = new ArrayList<>();
         votes.add("Bush");
         votes.add("Bush");
@@ -45,6 +41,7 @@ public class Library {
         votes.add("Bush");
         votes.add("Hedge");
         votes.add("Bush");
+        System.out.println("****************************      Tallying Election     *******************************");
         String winner = tally(votes);
         System.out.println(winner + " received the most votes!");
 
@@ -92,14 +89,14 @@ public class Library {
     }
 
     public static double arrayArrays(int[][] arr) {
-double min=Double.MAX_VALUE,max=Double.MIN_VALUE;
+        double min = Double.MAX_VALUE, max = Double.MIN_VALUE;
         double[] newArr = new double[arr.length];
-        for (int index = 0 ; index < arr.length ; index++) {
-            newArr[index] =  calculateAvg(arr[index]);
+        for (int index = 0; index < arr.length; index++) {
+            newArr[index] = calculateAvg(arr[index]);
 
 
         }
-        for (int index=0;index<newArr.length;index++){
+        for (int index = 0; index < newArr.length; index++) {
             if (min > newArr[index]) {
                 min = newArr[index];
             }
@@ -111,7 +108,7 @@ double min=Double.MAX_VALUE,max=Double.MIN_VALUE;
         return min;
     }
 
-    public static void analyzingWeatherData(int[][] arr) {
+    public static int analyzingWeatherData(int[][] arr) {
         Set<Integer> setValues = new HashSet<>();
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
@@ -119,22 +116,17 @@ double min=Double.MAX_VALUE,max=Double.MIN_VALUE;
             for (int secondIndex = 0; secondIndex < arr[index].length; secondIndex++) {
 
                 setValues.add(arr[index][secondIndex]);
-
-
             }
 
         }
 //        System.out.println(setValues);
-
-        for (int value :
-                setValues) {
+        for (int value : setValues) {
             if (min > value) {
                 min = value;
             }
             if (max < value) {
                 max = value;
             }
-
         }
         System.out.println("High: " + max);
         System.out.println("Low: " + min);
@@ -148,7 +140,7 @@ double min=Double.MAX_VALUE,max=Double.MIN_VALUE;
             }
 
         }
-
+return max;
 
     }
 
@@ -157,23 +149,23 @@ double min=Double.MAX_VALUE,max=Double.MIN_VALUE;
         int countShrub = 0;
         int countHedge = 0;
         String winner;
-        for (String vote :
-                votes) {
+        for (String vote : votes) {
             if (vote.equals("Bush")) {
                 countBush++;
-            }else if(vote.equals("Shrub")){
+            } else if (vote.equals("Shrub")) {
                 countShrub++;
-            }else if(vote.equals("Hedge")){
+            } else if (vote.equals("Hedge")) {
                 countHedge++;
             }
         }
-        if(countBush>countShrub&&countBush>countHedge){
-           return winner="Bush";
-        }else if(countHedge>countBush&&countHedge>countShrub){
-           return winner="Hedge";
-        }else if(countShrub>countBush&&countShrub>countHedge){
-           return winner="Shurb";
-        }else {
-        return "Unknown";}
+        if (countBush > countShrub && countBush > countHedge) {
+            return winner = "Bush";
+        } else if (countHedge > countBush && countHedge > countShrub) {
+            return winner = "Hedge";
+        } else if (countShrub > countBush && countShrub > countHedge) {
+            return winner = "Shurb";
+        } else {
+            return "Unknown";
+        }
     }
 }
