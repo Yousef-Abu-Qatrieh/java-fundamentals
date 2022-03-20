@@ -12,4 +12,9 @@ is a method that check a given array if it contain duplicate element or not it w
 # CalculateAvg
 is method that calculate the average of array elements.   
 # ArrayofArrays
- is method that return the smallest avg of array from 2d array.     
+is method that return the smallest avg of array from 2d array.   
+# Analyzing Weather Data
+a method that Iterate through all of the data to find the min and max values. Use a HashSet of type Integer to keep track of all the unique temperatures seen. Finally, iterate from the min temp to the max temp and create a String containing any temperature not seen during the month. Return that String.   
+
+# Tallying Election  
+a function called tally that accepts a List of Strings representing votes and returns one string to show what got the most votes.   
