@@ -21,15 +21,12 @@ public class App {
 
     public static void gatesReader() throws IOException {
         FileReader file = new FileReader("app/src/main/resources/gates.js");
-
         BufferedReader bufferedReader = new BufferedReader(file);
-
         int counter = 0;
         String line;
         while ((line = bufferedReader.readLine()) != null) {
             System.out.println(line);
-
-
+            
             if (bufferedReader.readLine().isEmpty()) {
                 counter++;
                 continue;
