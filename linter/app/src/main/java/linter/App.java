@@ -21,7 +21,7 @@ public class App {
 
     public static void gatesReader() throws IOException {
         FileReader file = new FileReader("app/src/main/resources/gates.js");
-        System.out.println(file);
+
         BufferedReader bufferedReader = new BufferedReader(file);
 
         int counter = 0;
@@ -33,28 +33,22 @@ public class App {
             if (bufferedReader.readLine().isEmpty()) {
                 counter++;
                 continue;
-
-
             }
             if (bufferedReader.readLine().endsWith("{")) {
                 counter++;
                 continue;
-
             }
             if (bufferedReader.readLine().endsWith("}")) {
                 counter++;
                 continue;
-
             }
             if (bufferedReader.readLine().contains("if") || bufferedReader.readLine().contains("else")) {
                 counter++;
                 continue;
-
             }
             if (bufferedReader.readLine().contains("return") && !bufferedReader.readLine().endsWith(";")) {
 
                 System.err.println("Line" + counter + ": Missing semicolon.");
-
 
             }
             bufferedReader.readLine();

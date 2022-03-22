@@ -4,11 +4,19 @@
 package linter;
 
 import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
     @Test void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    }
+    @Test void Linter() throws IOException {
+        App classUnderTest = new App();
+        String expected="Line3: Missing semicolon.";
+        assertNotNull(expected,classUnderTest.getGreeting());
     }
 }
